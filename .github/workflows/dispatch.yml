@@ -6,4 +6,4 @@ jobs:
     name: my-job
     steps:
     - name: run hello
-      run: echo hello ${{ github.event.client_payload.id }}
+      run: echo hello ${{ toJson(github.event.client_payload) }}
