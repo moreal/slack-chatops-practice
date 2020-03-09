@@ -6,4 +6,6 @@ jobs:
     name: my-job
     steps:
     - name: run hello
-      run: echo hello ${{ toJson(github.event.client_payload) }}
+      run: echo "$HI"
+      env:
+        HI: ${{ toJson(github.event.client_payload) }}
