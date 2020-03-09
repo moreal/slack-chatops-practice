@@ -2,6 +2,7 @@ name: Dispatch
 on: repository_dispatch
 jobs:
   test:
+    runs-on: ubuntu-latest
     name: my-job
     steps:
     - name: run hello
