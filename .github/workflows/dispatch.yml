@@ -1,0 +1,8 @@
+name: Dispatch
+on: repository_dispatch
+jobs:
+  test:
+    name: my-job
+    steps:
+    - name: run hello
+      run: echo hello {{ github.event.client_payload }}
